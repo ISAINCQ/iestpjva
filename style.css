@@ -12,21 +12,30 @@ body {
   margin: 0 auto;
 }
 .header {
-  width: 100%;
-  text-align: center;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 100px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 
 .header .logo {
-  width: 7em;
+  width: 25%;
+}
+.contenedor{
+  padding: 0 100px;
 }
 .nav {
   display: flex;
   align-content: center;
-  width: 100%;
-  height: 5em;
+  width: 50%;
+  height: 100%;
 }
 .barnav {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -40,7 +49,7 @@ body {
   position: relative;
 }
 .menu a{
-    font-size: 1.1em;
+    font-size: 0.9em;
     color: #5e5e5e;
     transition: ease-in-out 0.2s;
     position: relative;
@@ -75,6 +84,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
 .instituto {
   color: #000;
 }
@@ -115,7 +125,10 @@ body {
 .banner-container {
   width: 100%;
   height: 500px;
+  position: absolute;
+  left: 0;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .banner-image {
@@ -149,12 +162,11 @@ body {
   font-weight: 600;
 }
 .banner-button:hover,
-.box-galery .btn-img:hover {
+.btn-img:hover {
     background-color: #fff;
     color: #00baff;
 }
 .article{
-    padding: 3em 4em;
     width: 100%;
 }
 .title-article{
@@ -167,35 +179,74 @@ body {
 }
 .galery{
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 10px;
 }
 .box-galery{
-    width: 25%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(25% - 10px); 
+  border: 1px solid #ccc; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .box-galery .box-img{
     width: 100%;
-    height: 100%;
+    height: 40%;
 }
 .box-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.box-galery .btn-img{
+.text-galery{
+  font-size: 0.8em;
+  padding: 15px 25px;
+}
+.btn-img{
     display: block;
     padding: 10px;
     color: #fff;
     background: #00baff;
     text-align: center;
     transition: ease-in-out .2s;
+    margin-top: auto;
 }
 .footer{
+  display: flex;
+  gap: 50px;
+    margin-top: 100px;
     width: 100%;
-    height: 150px;
-    padding: 3em 4em; 
+    padding: 50px 100px;
+    color: #ffffff;
+    background: #232323;
 }
-.text-footer{
-    color: #5e5e5e;
-    font-weight: 300;
+.logoiestp_jva{
+  width: 50px;
 }
+.redes-logos{
+  width: 20px;
+  height: 20px;
+  fill: #9c9c9c;
+  margin-right: 5px;
+  margin-top: 10px;
+  transition: all 0.4s;
+}
+.subtitulo_footer{
+  margin-bottom: 32px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+.redes-sociales, .contacto{
+  width: 40%;
+}
+.text_footer{
+  color: #9c9c9c;
+  font-weight: 300;
+  font-size: 0.8em;
+}
+.redes-logos:hover{
+  fill: #fff;
+}
+
