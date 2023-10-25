@@ -42,11 +42,11 @@ function movScroll(){
     let header = document.querySelector('.header');
     let scrollPosition = window.scrollY;
 
-    if (scrollPosition > 50) {
+    if (scrollPosition > 100) {
         linkheader.style.color = '#fff';
         header.style.position = 'fixed';
         header.style.top = '0';
-        header.style.left ='0';
+        header.style.left ='calc(50%-250px)';
         header.style.width = '100%';
         header.style.backgroundColor = 'rgba(192, 192, 192, 0.8)';
     } else {
